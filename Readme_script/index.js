@@ -1,7 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const util = require ('./util');
 
-const generateREADME = ({ username, location, github, linkedin }) =>
+const generateREADME = require ('./util/Markdown');
 
 // Inquirer questions
 
@@ -29,7 +30,7 @@ inquirer
     },
     {
         type: "input",
-        name: "project",
+        name: "title",
         message: "What is your project title?",
         // Validate if the user has provided a value
         validate: (value) => {
@@ -39,7 +40,7 @@ inquirer
     },
     {
         type: "input",
-        name: "project-description",
+        name: "description",
         message: "Please write a brief description of your project",
         // Validate if the user has provided a value
         validate: (value) => {
@@ -64,13 +65,13 @@ inquirer
 
     {
         type: "input",
-        name: "test-command",
+        name: "tests",
         message: "What command should be run to run tests?"
     },
 
     {
         type: "input",
-        name: "repo-info",
+        name: "usage",
         message: "What does the user need to know about using the repo?"
         // Validate if the user has provided a value
         validate: (value) => {

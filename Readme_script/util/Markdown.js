@@ -29,7 +29,7 @@ const generateREADME (data) {
     This project is licensed under the ${data.license} license.
     
     # Contributing 
-    Contributors: ${data.contributing}
+    Contributors: ${data.contribution}
 
     # Tests 
     Contributors: ${data.tests}
