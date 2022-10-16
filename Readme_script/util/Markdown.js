@@ -1,14 +1,14 @@
 
 // Function to generate README 
-const generateREADME (data) {
+function generateREADME (data) {
     return `
-    # ${data.title}
+    ## ${data.title}
     https://github.com/${data.username}/${data.title}
 
-    # Description
+    ## Description
     ${data.description}
 
-    # Table of Contents
+    ## Table of Contents
 
     * [Installation] (#installation)
     * [Usage] (#usage)
@@ -17,22 +17,29 @@ const generateREADME (data) {
     * [Tests] (#tests)
     * [Questions] (#questions)
     
-    # Installation
+    ## Installation
 
     The following dependencies are required to be installed to run the application.
     ${data.dependencies}
 
-    # Usage
+    ## Usage
     ${data.usage}
 
-    # License 
+    ## License 
     This project is licensed under the ${data.license} license.
     
-    # Contributing 
-    Contributors: ${data.contribution}
+    ## Contributing 
+    ${data.contribution}
 
-    # Tests 
+    ## Tests 
     Contributors: ${data.tests}
+
+    ## Contact Me 
+    
+    If you have any questions, please feel free to reach out to me on:
+
+    Email: ${data.email}
+    Github: ${data.username}
 
     `
 } 
