@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-//const generateREADME = ({ username, location, github, linkedin }) =>
+const generateREADME = ({ username, location, github, linkedin }) =>
 
 // Inquirer questions
 
@@ -64,13 +64,13 @@ inquirer
 
     {
         type: "input",
-        name: "dependencies",
+        name: "test-command",
         message: "What command should be run to run tests?"
     },
 
     {
         type: "input",
-        name: "dependencies",
+        name: "repo-info",
         message: "What does the user need to know about using the repo?"
         // Validate if the user has provided a value
         validate: (value) => {
@@ -80,7 +80,7 @@ inquirer
     },
     {
         type: "input",
-        name: "dependencies",
+        name: "contribution",
         message: "What does the user need to know about contributing to the repo?"
         // Validate if the user has provided a value
         validate: (value) => {
@@ -88,4 +88,4 @@ inquirer
                 else {return 'Please enter a valid input'}
         },
     }
-    ])
+
